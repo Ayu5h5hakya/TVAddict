@@ -1,0 +1,19 @@
+<div class="row">
+  <form class="col s6 offset-s3" method="GET" action="/searchme">
+  <div class="input-field">
+          <input placeholder="Search for TV series" name="series_name" type="text">
+          <button class="btn-floating btn-large waves-effect waves-light orange darken-4" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+  </div>
+</form>
+</div>
+{{#if search_results}}
+  <div class="row">
+    <ul class="collection s6 offset-s3">
+        {{#each search_results}}
+          <a class="collection-item" href="#modal1">{{this}}</a>
+        {{/each}}
+      </ul>
+  </div>
+{{/if}}

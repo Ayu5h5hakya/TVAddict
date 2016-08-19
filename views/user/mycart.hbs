@@ -1,0 +1,67 @@
+{{# if seriesList}}
+    <div class="row">
+
+        <div class="col s6 m3">
+          <ul class="collection" style="border-collapse:collapse">
+            {{# each seriesList}}
+                <li class="collection-item">
+                  <strong><a href="/show/{{this.item.title}}">{{this.item.title}}</a></strong>
+                </li>
+            {{/each}}
+          </ul>
+        </div>
+
+        {{#if details}}
+          <div class="col s6 m9">
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src={{imgpath}}>
+              </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h2>{{details.name}}</h2>
+                <div class="divider"></div>
+                <div class="section">
+                  <h5>Synopsis</h5>
+                  <p>{{details.summary}}</p>
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                  <h5>Genres</h5>
+                    {{#each details.genres}}
+                      <div class="chip">{{this}}</div>
+                    {{/each}}
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                  <h5>First Air Date</h5>
+                  {{details.premiered}}
+                </div>
+                </div>
+            </div>
+            </div>
+            <ul class="collapsible">
+              {{#each seasons}}
+                <li class="collection-item">
+                <div class="collapsible-header">Season {{this.number}}</div>
+                <div class="collapsible-body">
+                    {{#if this.summary}}
+                      {{this.summary}}
+                    {{else}}
+                      No synopsis for Season {{this.number}} yet
+                    {{/if}}
+                </div>
+                </li>
+              {{/each}}
+            </ul>
+        </div>
+
+        {{/if}}
+    </div>
+{{else}}
+    <div class="row">
+        <div class="col s12 m4 offset-s4">
+          <h2>No subscribed series yet</h2>
+        </div>
+    </div>
+{{/if}}

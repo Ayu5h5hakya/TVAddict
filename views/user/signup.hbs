@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col s12 m4 l8">
+        <h1>Sign Up</h1>
+        {{#if hasErrors}}
+          {{# each messages}}
+              <p>{{this}}</p>
+          {{/each}}
+        {{/if}}
+        <div class="row">
+          <form action="/user/signup" class="col s12" method="post">
+            <div class="input-field col s12">
+              <input placeholder="Email" id="email" type="text" class="validate" name="email">
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="Password" id="password" type="password" class="validate" name="password">
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">button</button >
+          </form>
+        </div>
+    </div>
+</div>

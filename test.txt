@@ -1,0 +1,32 @@
+Big data is the term used for datasets with sizes that cannot be processed or analysed by modern processing
+tools in an tolerable amount of time.Big data analytics technologies and techniques use NoSQL databases
+map reduce frameworks and hadoop to analyse the data of various types.
+data acqusition - involves the nethods and techniques used to gather it
+data pre processing - data refinement -specific formats , data correction etc
+data analysis -
+result interpretation
+Buisness domain expretise and strong analytical skills + creative and good communications
+knowledge in statistics, machine learning and data visualization
+ability to develop data analytic solutins using various techniques and languages such as map reduce and R
+ Roles of a data scientist:
+ Recognize and reflect the 2 phase nature of the analytics process
+ provide for companies the guidance on how to estabilish that their use of data for knowledge discovery
+------------->
+{{# each this}}
+<div class="col s12 m4">
+  <div class="card large">
+    <div class="card-image">
+      <img src="{{this.imagePath}}"
+           class="responsive-img"
+           style="height:250px;width:auto;">
+      <span class="card-title">{{this.title}}</span>
+    </div>
+    <div class="card-content" style="text-overflow:ellipsis;">
+      <p>{{this.description}}</p>
+    </div>
+    <div class="card-action">
+      <a href="/addtocart/{{this._id}}">Add to watch list</a>
+    </div>
+  </div>
+</div>
+{{/each}}

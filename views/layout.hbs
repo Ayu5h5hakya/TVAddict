@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+      <script src="https://use.fontawesome.com/7fc63f5d64.js"></script>
+  </head>
+  <body class="container center">
+    <nav>
+      <div class="nav-wrapper orange darken-4">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id='userop_dropdown' class="dropdown-content">
+              {{# if login}}
+                  <li><a href="#!">one</a></li>
+                  <li><a href="#!">two</a></li>
+                  <li><a href="#!">three</a></li>
+              {{else}}
+                  <li><a href="/user/signup">Sign up</a></li>
+                  <li><a href="/user/signin">Sign in</a></li>
+              {{/if}}
+            </ul>
+          <li>
+            <a href="/user/mycart">
+              <i class="fa fa-television" aria-hidden="true"></i> Watch List
+            </a>
+          </li>
+          <li><a href="#" data-activates='userop_dropdown' class="dropdown-button" data-beloworigin="true"><i class="fa fa-user" aria-hidden="true"></i> User</a></li>
+          </ul>
+      </div>
+    </nav>
+    {{{body}}}
+  </body>
+</html>
